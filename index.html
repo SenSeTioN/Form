@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <form action="" class="menu-login">
+      <h2 class="menu-login__title"> Войти в HR-Link</h2>
+      <img src="logo.png" alt="logo" class="menu-login__logo">
+      <label class="menu-login__label">
+        <span class="menu-login__text">Email/Телефон/WhatsApp</span>
+        <input type="text" class="menu-login__input" placeholder="Введите email или телефон">
+      </label>
+      <label class="menu-login__label">
+        <span class="menu-login__text">Пароль</span>
+        <a href="#" class="menu-login__link"> Не знаете пароль?</a>
+        <input type="password" id="password-input" placeholder="Введите пароль" name="password"
+          class="menu-login__input password">
+        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+      </label>
+      <button class="menu-login__button" type="button"> Войти
+      </button>
+    </form>
+    <p class="copyright">Copyright © 2023 HR-Link</p>
+  </div>
+  <script>
+    function show_hide_password(target) {
+      const input = document.getElementById('password-input');
+      if (input.getAttribute('type') == 'password') {
+        target.classList.add('view');
+        input.setAttribute('type', 'text');
+      } else {
+        target.classList.remove('view');
+        input.setAttribute('type', 'password');
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>
